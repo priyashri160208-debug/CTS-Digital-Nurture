@@ -12,6 +12,10 @@ public class CountryService {
 
     @Transactional
     public List<Country> getAllCountries() {
+        @Transactional
+public Country addCountry(Country country) {
+    return countryRepository.save(country);
+}
         return countryRepository.findAll();
     }
 }
